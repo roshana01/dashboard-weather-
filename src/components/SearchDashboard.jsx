@@ -1,6 +1,6 @@
 import { IoSearch } from "react-icons/io5";
 
-export default function SearchForm() {
+export default function SearchDashboard() {
   return (
     <form className="flex items-center">
       <div className="relative w-1/2">
