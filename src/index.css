@@ -3,9 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #14203A; 
+  --primary-color: #14203A;
   --secondary-color: #1E1E1E;
-  --accent-color: #0E1421676B73; 
+  --accent-color: #0E1421;
   --highlight-color: #742BEC;
-  --text-color: #FFFFFF; 
+  --text-color: #FFFFFF;
+  --background-color: #060C1A;
+  --icon-color: #676B73;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+}
+
+body {
+  background-color: var(--background-color);
 }
