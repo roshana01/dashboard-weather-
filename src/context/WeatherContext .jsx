@@ -6,7 +6,8 @@ import { useWeatherApi } from "../hook/useWeatherApi";
 import { format } from "date-fns";
 
 export const WeatherProvider = ({ children }) => {
-  const [cityName, setCityName] = useState("");
+  const [cityName, setCityName] = useState("Vienna");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { data: weatherData, error, isLoading } = useWeatherApi(cityName);
   const { register, handleSubmit, reset } = useForm();
 
@@ -17,9 +18,6 @@ export const WeatherProvider = ({ children }) => {
   const feelsLike = weatherData?.main?.feels_like.toFixed(0);
   const description = weatherData?.weather[0]?.description;
   const descriptionWeatherIcons = weatherData?.weather[0]?.description;
-  console.log(descriptionWeatherIcons);
-
-  console.log(weatherData);
 
   //date
   const currentDate = format(new Date(), "eeee");
@@ -36,7 +34,6 @@ export const WeatherProvider = ({ children }) => {
     }, 1000),
     []
   );
-  console.log(typeof error);
 
   const onSubmitHandler = (data) => {
     setCityName(data.city);
@@ -47,6 +44,11 @@ export const WeatherProvider = ({ children }) => {
     debouncedSearch(e.target.value);
   };
 
+  const toggleSidebar = () => {
+    // setIsSidebarOpen(!isSidebarOpen);
+    setIsSidebarOpen((prev) => !prev);
+  };
+
   return (
     <>
       <WeatherContext.Provider
@@ -55,8 +57,11 @@ export const WeatherProvider = ({ children }) => {
           isLoading,
           error,
           cityName,
-          isLoading,
           setCityName,
+          isSidebarOpen,
+          setIsSidebarOpen,
+          toggleSidebar,
+          isLoading,
           register,
           handleSubmit,
           handleCityChange,
@@ -70,7 +75,7 @@ export const WeatherProvider = ({ children }) => {
           description,
           currentDate,
           formattedDate,
-          descriptionWeatherIcons
+          descriptionWeatherIcons,
         }}
       >
         {children}

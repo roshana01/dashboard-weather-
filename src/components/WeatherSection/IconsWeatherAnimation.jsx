@@ -7,12 +7,10 @@ export default function IconsWeatherAnimation() {
   const [animationData, setAnimationData] = useState("");
 
   const { descriptionWeatherIcons } = useContext(WeatherContext);
-  console.log(descriptionWeatherIcons);
 
   (async () => {
     const data = await weatherIcons[descriptionWeatherIcons]?.();
     setAnimationData(data.default);
-    console.log(data);
   })();
 
   return (
@@ -22,7 +20,7 @@ export default function IconsWeatherAnimation() {
           animationData={animationData}
           loop={true}
           autoplay={true}
-          style={{ width: 250, height: 250 }}
+          className="w-[100px] h-[100px] md:w-[250px] md:h-[250px]"
         />
       )}
     </div>
