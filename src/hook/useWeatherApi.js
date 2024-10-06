@@ -6,8 +6,7 @@ export const fetchWeather = async (cityName) => {
   const URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${KEY_API}&units=metric`;
   try {
     const res = await fetch(URL);
-    console.log(res);
-    
+  
     if (!res.ok) {
       throw new Error("")
     } else {
