@@ -6,10 +6,10 @@ export const weatherIcons = {
   "overcast clouds": () => import("../assets/icons/Animation - 1727797986355.json"),
   "broken clouds": () => import("../assets/icons/Animation - 1727798066622.json"),
   // haze
-  haze: () => import("../assets/icons/Animation - 1727946674353.json"),
+  haze: () => import("../assets/icons/Animation - 1727954704220.json"),
   mist: () => import("../assets/icons/Animation - 1727954704220.json"),
   drizzle: () => import("../assets/icons/Animation - 1727946674353.json"),
-  "light intensity drizzle": () => import("../assets/icons/Animation - 1727946674353.json"),
+  "light intensity drizzle": () => import("../assets/icons/Animation - 1727954704220.json"),
 
   // rain
   rain: () => import("../assets/icons/Animation - 1727798170130.json"),
