@@ -5,8 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'custom-6': 'repeat(6, minmax(0, 1fr))',
+      },
+    },
   },
+ 
+  
+
   daisyui: {
     themes: ["light", "dark"],// false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "light", // name of one of the included themes for dark mode
@@ -19,3 +26,5 @@ export default {
   },
   plugins: [require("daisyui")],
 }
+
+
