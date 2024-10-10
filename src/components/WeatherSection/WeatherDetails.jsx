@@ -18,17 +18,17 @@ export default function WeatherDetails() {
 
   return (
     <div className="flex justify-between items-center">
-      <div className="flex flex-col mx-5 my-8 md:mx-14 md:my-4">
-        <div className="flex flex-row rounded-[20px] items-center max-w-[130px] h-7 bg-[#742BEC] mt-2 px-1 md:mt-6 md:px-2">
+      <div className="flex flex-col mx-3 my-8 md:mx-14 md:my-2">
+        <div className="flex flex-row rounded-[20px] items-center max-w-[130px] h-7 bg-[#742BEC] mt-2 px-1 md:mt-5 md:px-2">
           <IoLocationSharp className="text-white w-4 h-4 sm:w-5 sm:h-5" />
           <p className="text-white text-md gap-2">{city}</p>
         </div>
 
         <div className="text-white">
-          <h2 className="text-[36px] md:text-[40px] mt-2 md:mt-[34px] font-medium">
+          <h2 className="text-[30px] md:text-[40px] mt-2 md:mt-[28px] font-medium">
             {currentDate}
           </h2>
-          <p className="md:mt-2 text-[14px] md:text-[16px]">{formattedDate}</p>
+          <p className="md:mt-2 text-[12px] md:text-[16px]">{formattedDate}</p>
         </div>
 
         <div className="text-white">
