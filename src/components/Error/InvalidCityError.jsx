@@ -10,10 +10,10 @@ export default function InvalidCityError() {
         animationData={animationData}
         loop={true}
         autoplay={true}
-        style={{ width: 260, height: 260 }}
+        style={{ width: 220, height: 220 }}
       />
-      <h1 className="text-[40px] font-bold text-[#364962da]">
-        City Not Found :(
+      <h1 className="text-[20px] px-3 ms:text-[30px] md:text-[30px] font-medium text-[#5c6d84da]">
+      Oops! It seems the city name is incorrect. Please check and try again
       </h1>
     </div>
   );
