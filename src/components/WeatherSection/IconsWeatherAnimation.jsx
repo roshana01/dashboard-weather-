@@ -1,12 +1,11 @@
-import React, { useContext, useState } from "react";
 import Lottie from "lottie-react";
 import { weatherIcons } from "../../data/weatherIcons";
 import { WeatherContext } from "../../context/WeatherContext ";
+import { useContext } from "react";
 
 export default function IconsWeatherAnimation() {
-  const [animationData, setAnimationData] = useState("");
-
-  const { descriptionWeatherIcons } = useContext(WeatherContext);
+  const { descriptionWeatherIcons, animationData, setAnimationData } =
+    useContext(WeatherContext);
 
   (async () => {
     const data = await weatherIcons[descriptionWeatherIcons]?.();
