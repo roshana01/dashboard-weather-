@@ -21,7 +21,7 @@ export default function SearchDashboard() {
         <input
           type="text"
           className="bg-[#0E1421] py-3 px-4 sm:py-4 sm:px-7 w-full rounded-[20px] pr-10 text-[17px] text-[#b6bfd0] z-10 relative sm:text-[20px] transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#742BEC] focus:ring-opacity-50 focus:ring-offset-2 focus:shadow-lg hover:shadow-lg"
-          placeholder="enter your city name..."
+          placeholder="search for your city name..."
           {...register("city", { onChange: handleCityChange })}
         />
 
