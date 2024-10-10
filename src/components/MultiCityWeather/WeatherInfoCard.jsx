@@ -32,7 +32,7 @@ export default function WeatherInfoCard() {
       {capitalWeatherData?.map((item) => (
         <div
           key={item.id}
-          className="bg-[#0E1421] w-[120px] h-[100px] aspect-square sm:w-[180px] sm:h-[120px] rounded-[20px] flex flex-col justify-between"
+          className="bg-[#0E1421] w-[110px] h-[100px] aspect-square sm:w-[180px] sm:h-[120px] rounded-[20px] flex flex-col justify-between"
         >
           <div className="flex justify-around mt-2">
             <div>

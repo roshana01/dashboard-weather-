@@ -10,7 +10,7 @@ import { useCapitalWeatherApi } from "../hook/useCapitalWeatherData";
 
 export const WeatherProvider = ({ children }) => {
   //state
-  const [cityName, setCityName] = useState("Russia");
+  const [cityName, setCityName] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [animationData, setAnimationData] = useState("");
   const [coord, setCoord] = useState({});
@@ -28,6 +28,9 @@ export const WeatherProvider = ({ children }) => {
     error: weekWeatherError,
     isLoading: weekWeatherLoading,
   } = useWeatherForecast(coord);
+
+
+  
   // get coord lat lon getWeatherForecast:
   const {
     data: capitalWeatherData,
