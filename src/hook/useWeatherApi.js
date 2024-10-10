@@ -18,7 +18,7 @@ export const fetchWeather = async (cityName) => {
       return data;
     }
   } catch (error) {
-    console.error("Error fetching the weather data:", error);
+    // console.error("Error fetching the weather data:", error);
     throw error;
   }
 };
